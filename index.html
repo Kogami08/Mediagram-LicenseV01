@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MEDIC-PROJECT</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/icon.ico">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header__content">
+      <div class="header__buttons">
+        
+        <h1>Mediagram</h1>
+        
+        <button class="header__theme-button" title="Toggle Theme">
+          <svg
+          class="header__theme-button-moon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="var(--text-dark)"
+          viewBox="0 0 16 16"
+          >
+          <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+          />
+        </svg>
+        <svg
+        class="header__theme-button-sun"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="var(--text-dark)"
+        viewBox="0 0 16 16"
+        >
+        <path
+        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        />
+      </svg>
+    </button>
+  </div>
+  
+  <div class="header__search">
+    <input type="text" placeholder="Search" />
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.669 21.6543C21.8625 21.4622 21.863 21.1494 21.6703 20.9566L17.3049 16.5913C18.7912 14.9327 19.7017 12.7525 19.7017 10.3508C19.7017 5.18819 15.5135 1 10.3508 1C5.18819 1 1 5.18819 1 10.3508C1 15.5135 5.18819 19.7017 10.3508 19.7017C12.7624 19.7017 14.9475 18.7813 16.606 17.2852L20.9739 21.653C21.1657 21.8449 21.4765 21.8454 21.669 21.6543ZM1.9843 10.3508C1.9843 5.7394 5.7394 1.9843 10.3508 1.9843C14.9623 1.9843 18.7174 5.7394 18.7174 10.3508C18.7174 14.9623 14.9623 18.7174 10.3508 18.7174C5.7394 18.7174 1.9843 14.9623 1.9843 10.3508Z"
+    fill="#A5A5A5"
+    stroke="#A5A5A5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    />
+  </svg>
+</div>
+
+<div class="header__buttons header__buttons--mobile">
+  <a href="#">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <rect
+    x="3"
+    y="3"
+    width="18"
+    height="18"
+    rx="5"
+    stroke="var(--text-dark)"
+    stroke-width="1.8"
+    />
+    <line
+    x1="12.1"
+    y1="6.9"
+    x2="12.1"
+    y2="17.1"
+    stroke="var(--text-dark)"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    />
+    <line
+    x1="6.9"
+    y1="11.8"
+    x2="17.1"
+    y2="11.8"
+    stroke="var(--text-dark)"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    />
+  </svg>
+</a>
+<a href="#">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.6"
+  />
+</svg>
+</a>
+<a href="#">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M5.81038 19.7478C5.83176 19.4539 5.70787 19.1681 5.47873 18.9827C3.2792 17.2037 1.9 14.5525 1.9 11.5868C1.9 6.27627 6.38748 1.9 12.0098 1.9C17.6196 1.9 22.1078 6.27565 22.1078 11.5868C22.1078 16.8966 17.6092 21.2735 11.998 21.2735C11.0656 21.2735 10.1798 21.1544 9.32697 20.9277C9.15685 20.8825 8.97721 20.8882 8.81028 20.944L5.64643 22.0022L5.81038 19.7478Z"
+  stroke="var(--text-dark)"
+  stroke-width="1.8"
+  stroke-linejoin="round"
+  />
+  <path
+  d="M10.1498 8.7952C10.2222 8.80563 10.2825 8.81606 10.3548 8.82649C11.428 9.05591 12.5252 10.0362 13.3693 10.6202C13.8396 10.9539 14.2375 10.9226 14.7078 10.6097C15.7086 9.92147 16.7456 9.26448 17.7705 8.58664C18.0478 8.39893 18.3372 8.20079 18.6748 8.45107C19.0486 8.7222 18.8195 9.0142 18.6266 9.28534C17.6137 10.6827 16.6129 12.0801 15.588 13.4671C14.8886 14.4265 13.8999 14.5621 12.8388 13.8842C12.1032 13.4045 11.3436 12.9561 10.6201 12.4556C10.1378 12.1219 9.73984 12.1636 9.28163 12.4764C8.26876 13.1647 7.24382 13.8217 6.21889 14.4995C5.94156 14.6872 5.65216 14.8854 5.31454 14.6247C4.97691 14.3744 5.15778 14.0928 5.33865 13.8321C6.3877 12.393 7.42469 10.9539 8.47374 9.51476C8.82343 9.02463 9.47456 8.73263 10.1498 8.7952Z"
+  fill="var(--text-dark)"
+  />
+</svg>
+</a>
+</div>
+
+
+<div class="header__buttons header__buttons--desktop">
+  <a href="#">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    d="M2.45307 11.751L11.9773 2.02175L21.5015 11.751C21.7906 12.0463 21.9545 12.4468 21.9545 12.8711V20.4556C21.9545 20.7747 21.7037 21 21.4427 21H15.964C15.713 21 15.4721 20.7849 15.4721 20.476V15.8886C15.4721 13.9497 13.9267 12.34 11.9773 12.34C10.0279 12.34 8.48244 13.9497 8.48244 15.8886V20.476C8.48244 20.7849 8.24157 21 7.99053 21H2.51187C2.25085 21 2 20.7747 2 20.4556V12.8711C2 12.4468 2.16397 12.0463 2.45307 11.751Z"
+    stroke="var(--text-dark)"
+    stroke-width="2"
+    />
+  </svg>
+</a>
+<a href="#">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M5.81038 19.7478C5.83176 19.4539 5.70787 19.1681 5.47873 18.9827C3.2792 17.2037 1.9 14.5525 1.9 11.5868C1.9 6.27627 6.38748 1.9 12.0098 1.9C17.6196 1.9 22.1078 6.27565 22.1078 11.5868C22.1078 16.8966 17.6092 21.2735 11.998 21.2735C11.0656 21.2735 10.1798 21.1544 9.32697 20.9277C9.15685 20.8825 8.97721 20.8882 8.81028 20.944L5.64643 22.0022L5.81038 19.7478Z"
+  stroke="var(--text-dark)"
+  stroke-width="1.8"
+  stroke-linejoin="round"
+  />
+  <path
+  d="M10.1498 8.7952C10.2222 8.80563 10.2825 8.81606 10.3548 8.82649C11.428 9.05591 12.5252 10.0362 13.3693 10.6202C13.8396 10.9539 14.2375 10.9226 14.7078 10.6097C15.7086 9.92147 16.7456 9.26448 17.7705 8.58664C18.0478 8.39893 18.3372 8.20079 18.6748 8.45107C19.0486 8.7222 18.8195 9.0142 18.6266 9.28534C17.6137 10.6827 16.6129 12.0801 15.588 13.4671C14.8886 14.4265 13.8999 14.5621 12.8388 13.8842C12.1032 13.4045 11.3436 12.9561 10.6201 12.4556C10.1378 12.1219 9.73984 12.1636 9.28163 12.4764C8.26876 13.1647 7.24382 13.8217 6.21889 14.4995C5.94156 14.6872 5.65216 14.8854 5.31454 14.6247C4.97691 14.3744 5.15778 14.0928 5.33865 13.8321C6.3877 12.393 7.42469 10.9539 8.47374 9.51476C8.82343 9.02463 9.47456 8.73263 10.1498 8.7952Z"
+  fill="var(--text-dark)"
+  />
+</svg>
+</a>
+<a href="#">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M18 2.8H7C5.23269 2.8 3.8 4.23269 3.8 6V17C3.8 18.7673 5.23269 20.2 7 20.2H18C19.7673 20.2 21.2 18.7673 21.2 17V6C21.2 4.23269 19.7673 2.8 18 2.8ZM7 1C4.23858 1 2 3.23858 2 6V17C2 19.7614 4.23858 22 7 22H18C20.7614 22 23 19.7614 23 17V6C23 3.23858 20.7614 1 18 1H7Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22 7.99995H3V6.19995H22V7.99995Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M10 6.99989L6 1.99989L7.57349 1.12573L11.5735 6.12573L10 6.99989Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M16.5 6.99989L12.5 1.99989L14.0735 1.12573L18.0735 6.12573L16.5 6.99989Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  d="M15.75 13.0671C16.0833 13.2595 16.0833 13.7407 15.75 13.9331L10.5 16.9642C10.1667 17.1566 9.75 16.9161 9.75 16.5312L9.75 10.469C9.75 10.0841 10.1667 9.84354 10.5 10.036L15.75 13.0671Z"
+  fill="var(--text-dark)"
+  />
+</svg>
+</a>
+<a href="#">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.6"
+  />
+</svg>
+</a>
+<button class="profile-button">
+  <div class="profile-button__border"></div>
+  <div class="profile-button__picture">
+    <img src="assets/default-user.png" alt="User Picture" />
+  </div>
+</button>
+</div>
+</nav>
+</header>
+
+
+<main class="main-container">
+  <section class="content-container">
+    <div class="content">
+      <div class="stories">
+        <button class="stories__left-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+            fill="#fff"
+            d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"
+            ></path>
+          </svg>
+        </button>
+        <div class="stories__content">
+          <button class="story story--has-story" onclick="showPopup('Signos de alarma', '<ul><li>Dolor de cabeza constante</li><li>Vómitos frecuentes</li><li>Zumbidos en los oídos</li><li>Flujo con mal olor</li><li>Ausencia de movimiento fetal</li><li>Dolor intenso en el vientre</li><li>Molestias para orinar</li><li>Hinchazón de manos</li></ul>', 'assets/S01.jpg')">
+            <div class="story__avatar">
+              <div class="story__border">
+                <svg
+                width="64"
+                height="64"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <circle r="31" cy="32" cx="32" />
+                <defs>
+                  <linearGradient
+                  y2="0"
+                  x2="1"
+                  y1="1"
+                  x1="0"
+                  id="--story-gradient"
+                  >
+                  <stop offset="0" stop-color="#f09433" />
+                  <stop offset="0.25" stop-color="#e6683c" />
+                  <stop offset="0.5" stop-color="#dc2743" />
+                  <stop offset="0.75" stop-color="#cc2366" />
+                  <stop offset="1" stop-color="#bc1888" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="story__picture">
+            <img src="assets/S01.jpg" alt="User Picture" />
+          </div>
+        </div>
+        <span class="story__user">Signos de alarma</span>
+      </button>
+      <button class="story story--has-story" onclick="showPopup('Síntomas frecuentes', '<ul><li><strong>Acidez gástrica:</strong> El reflujo gástrico disminuye al orientar a la paciente en ingerir comidas menos abundantes y más frecuentes y alimentos más suaves, además de no comer justo antes de dormir.</li><li><strong>Estreñimiento:</strong> Está asociado con un aumento del tiempo de tránsito, aumento en la absorción de agua y con frecuencia una disminución del volumen fecal. Es útil aumentar los líquidos, las frutas y verduras.</li><li><strong>Cansancio:</strong> Se alivia con el reposo. No existe tratamiento específico, sin embargo, desaparece en el segundo trimestre.</li><li><strong>Calambres en las piernas:</strong> Se sugiere el aporte de calcio oral, potasio o el agua tónica, además de un masaje y reposo.</li><li><strong>Lumbalgia:</strong> Es frecuente al final del embarazo por el peso que se ejerce sobre la columna lumbar, los músculos y ligamentos asociados. Se sugiere un masaje, colocar calor en la zona y un uso reducido de analgésicos.</li><li><strong>Várices:</strong> Es común en las mujeres que permanecen mucho tiempo de pie, la utilización de medias elásticas ayuda a reducir las molestias.</li><li><strong>Flujo vaginal:</strong> El medio hormonal provoca un incremento de las secreciones vaginales normales.</li><li><strong>Hemorroides:</strong> El tratamiento consiste en baños de asiento. Desaparecen después del parto, durante aproximadamente los 6 meses siguientes al parto no se deben realizar reparaciones quirúrgicas.</li></ul>', 'assets/S02.jpg')">
+        <div class="story__avatar">
+          <div class="story__border">
+            <svg
+            width="64"
+            height="64"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <circle r="31" cy="32" cx="32" />
+          </svg>
+        </div>
+        <div class="story__picture">
+          <img src="assets/S02.jpg" alt="User Picture" />
+        </div>
+      </div>
+      <span class="story__user">Síntomas frecuentes</span>
+    </button>
+    <button class="story story--has-story" onclick="showPopup('Embarazo mes a mes: desarrollo del feto y cambios en la madre', 'A lo largo de los 9 meses de embarazo el bebé va formándose, desarrollándose y creciendo dentro del vientre materno hasta que llega el momento del nacimiento. Del mismo modo, el cuerpo de la mujer y los síntomas que siente van cambiando a medida que avanzan las semanas de embarazo. <br><br> 1 Primer mes de embarazo <br> Si se mantienen varias relaciones sexuales durante los días fértiles de la mujer para buscar el embarazo, es habitual que no se conozca con exactitud cuándo ha ocurrido la concepción y el inicio exacto del embarazo. Sin embargo, es más fácil que la mujer sepa cuándo le bajó la última regla (fecha de última menstruación o FUR). Es posible que, debido al aumento de la hormona hCG (la hormona del embarazo), la mujer empiece a notar algunos síntomas en este primer mes, pero de forma muy suave. <br><br> Segundo mes de embarazo <br> Tras la implantación, se producirá la gastrulación, mediante la cual las células del disco embrionario darán lugar a 3 capas diferenciadas: ectodermo, mesodermo y endodermo. Es un mes de mucha evolución en el que el corazón primitivo, incluso, comienza a latir en la semana 6 de gestación. La barriga todavía no se nota, aunque es posible que la mujer empiece a sentir ya algunos síntomas como náuseas, vómitos, cansancio o sensibilidad mamaria. También puede ocurrir que la gestación avance sin demasiados síntomas, pero ello no es indicativo de complicación: simplemente significa que hay mujeres que padecen los síntomas de forma más suave. <br><br> Tercer mes de embarazo <br> A partir de este mes finaliza el periodo de embrión y comienza el periodo fetal, por lo que el embrión pasa a denominarse feto. En el tercer mes de embarazo, el futuro bebé forma todos sus órganos, aunque, por el momento, no están desarrollados del todo. Falta que maduren y acaben de evolucionar correctamente. A lo largo de estas 4 semanas, el feto crece hasta los 7 cm y llegará a pesar unos 8-14 gramos, aproximadamente. Además, al finalizar este mes, es habitual que comiencen a reducirse los molestos síntomas causados por la hormona hCG, como las náuseas. El motivo es que la concentración de esta hormona alcanza un pico en la semana 12, pero luego comienza a descender paulatinamente. <br><br> Cuarto mes de embarazo <br> En este cuarto mes de gestación, el feto se cubre de lanugo, un vello muy fino que recubre su piel y que actúa de conservador del calor corporal. Sus ojos son particularmente grandes, aún los mantiene cerrados y están muy separados entre sí. Sin embargo, la forma de la cara ya está definida y se puede distinguir perfectamente el cuello que separa la cabeza del resto del cuerpo. El intestino fetal comienza a acumular una sustancia espesa denominada meconio, que constituirá las primeras heces del bebé que expulsará tras el nacimiento. Además, en la semana 16 de embarazo, aparecen los pliegues epidérmicos en las palmas de las manos y en los dedos del bebé, lo que serán sus huellas dactilares. El tamaño del feto cuando finaliza el cuarto mes de gestación puede ser de unos 18 cm y su peso será de unos 100 g. <br><br> Quinto mes de embarazo <br> Uno de los primeros cambios en este periodo de gestación es la aparición de la vérnix caseosa, una sustancia grasa y blanquecina que protegerá la piel del bebé. Por otro lado, el feto empieza a percibir sonidos como la voz materna, por lo que puede ser interesante estimular esta capacidad. Además, las 4 cavidades cardíacas (2 aurículas y 2 ventrículos) se delimitan en este mes y el corazón fetal ya late con fuerza. Al finalizar el quinto mes de gestación, el bebé puede llegar hasta los 25 centímetros de longitud, aproximadamente, y a los 300 g de peso. Es posible que la embarazada note que, cuando se tumba, el feto se mueve mucho más y con más energía. Esto se debe a que el bebé se encaja mejor en la pelvis materna cuando la mujer está de pie. Por esta razón, sus movimientos pueden disminuir considerablemente, mientras que aumentan cuando la embarazada está en posición horizontal (tumbada). Puede que el ombligo de la mujer se aplane o empiece a salirse hacia afuera. Si es el caso, volverá a su aspecto habitual después de dar a luz. La embarazada ya no sentirá náuseas ni vómitos, aunque puede que tenga otro tipo de molestias, tales como ardores de estómago y dolores de espalda. <br><br> Sexto mes de embarazo <br> La evolución del bebé pasa por medir de 25 cm a 35 cm, aproximadamente, y de pesar cerca de 300 gramos hasta unos 750 gramos. Al reconocer los sonidos claramente, responde perfectamente a los estímulos como, por ejemplo, la música. De este modo, se puede comprobar cómo el feto se mueve cuando escucha música, como respuesta al estímulo sonoro que está recibiendo. En cuanto al pelo del futuro bebé, ya se le han formado las cejas, el cabello y las pestañas. Su piel empieza a volverse más opaca, cogiendo consistencia. El bebé puede abrir y cerrar los ojos, además de hacer gestos como sacar la lengua. Las proporciones de su cuerpecito empiezan a igualarse en relación a su cabeza. Cada vez está mejor formado y se parece más al futuro recién nacido. La barriga ya debe ser bastante voluminosa, por lo que es probable que la mujer se sienta cansada, tenga dolores de espalda, molestias o incomodidades en ciertas posturas y algo de hinchazón en piernas, tobillos y pies. <br><br> Séptimo mes de embarazo <br> Empieza el último trimestre de embarazo y el desarrollo fetal es ya avanzado. Por ello, es normal que la mujer sienta mayor cansancio y pesadez. Además, a la embarazada le costará más dormir, hacer ciertos movimientos como atarse los cordones o agacharse a recoger cosas del suelo. Adicionalmente, es probable que haya más hinchazón en pies y tobillos. En este periodo de gestación, el esqueleto fetal se hace más consistente. La grasa ya empieza a acumularse debajo de la piel del bebé, lo que le permitirá controlar la temperatura tras el nacimiento. En este mes, la longitud del feto alcanzará los 40 cm, aproximadamente, y puede llegar a sobrepasar ligeramente los 1100 gramos. <br><br> Octavo mes de embarazo <br> Debido a este aumento considerable de peso y longitud, el espacio en el útero comienza a ser más limitado. Además, el útero presiona a la vejiga por su evidente aumento de tamaño, por lo que las ganas de orinar serán frecuentes. El bebé comienza a perder el lanugo que cubría su cuerpo y sigue aumentando de peso y tamaño, por lo que se siguen limitando sus movimientos y, al mismo tiempo, no deja de presionar, cada vez más, la vejiga materna. A lo largo de este mes, el bebé alcanzará cerca del 50% del peso total que tendrá al nacimiento. En este mes de embarazo los movimientos del bebé ya sean visibles por fuera del abdomen materno, lo que será realmente especial. Por otro lado, su piel va adquiriendo cada vez un aspecto más liso y sonrosado, debido a que sigue la acumulación de grasa subcutánea. Pese a que el bebé está prácticamente formado, sus pulmones aún no están maduros y, si tuviera lugar un parto prematuro, no podrían respirar por sí mismos. Es muy posible que la mujer sienta acidez o que esté estreñida durante esta fase del embarazo. Todos estos síntomas son muy habituales y se deben a que el aumento del tamaño del útero hace las digestiones más difíciles, lentas y pesadas. El cansancio durante este último período del embarazo también es bastante normal. Esto ocurre no solo por el aumento de peso, que suele fatigar mucho, sino porque las dificultades para dormir y descansar ya serán notables. Se recomienda tomar mucho calcio, hierro, ácido fólico, proteínas y vitamina C. El estado de gestación es muy avanzado, así que la embarazada debe cuidarse mucho. <br><br> Noveno mes de embarazo <br> Al finalizar el noveno mes de embarazo, el feto puede medir cerca de 50 cm y, su peso, será de unos 2500 g de media. Durante este periodo, el bebé encaja su cabecita en la pelvis materna, preparándose para el parto. La piel del bebé ya no está arrugada y es más suave, debido a la grasa que se ha ido acumulando debajo de ella y a la desaparición, casi completa, del lanugo. El color de la piel ya no es tan rojo, sino que empieza a sonrojarse y se asemeja más al color definitivo que tendrá en el momento del parto. Como hemos comentado, desde hace ya algunas semanas, los movimientos del bebé son menores debido a su aumento de tamaño y de peso, pero esto no significa que la embarazada no sienta la presencia de su futuro hijo. De hecho, no debe pasar ni un solo día en que no se sienta al bebé. No obstante, es habitual que ahora los movimientos se sientan más bruscos, como si fuesen patadas, ya que el bebé tiene muy poco espacio para moverse. Este mes puede hacerse especialmente largo y molesto para la madre, aunque lo vive con mucha ilusión: el parto se acerca y son muchas las ganas de verle la carita al bebé. <br><br> El final del embarazo <br> Es habitual que la mujer note unas fuertes contracciones, conocidas como contracciones de Braxton Hicks, que son contracciones diferentes a las de parto y que se producen como preparación del organismo para cuando llegue el momento de dar a luz. Estas contracciones son indoloras (aunque pueden ser molestas), irregulares y no aumentan su frecuencia e intensidad, por lo que pueden distinguirse de las contracciones de parto verdaderas. Si, a partir de la semana 42, el bebé no ha visto la luz, lo habitual es que el especialista encargado del seguimiento del embarazo provoque el parto, ya que el futuro hijo o hija está listo para nacer y puede suponer un riesgo que se quede más tiempo del necesario en el vientre de la madre.', 'assets/S03.jpg')">
+      <div class="story__avatar">
+        <div class="story__border">
+          <svg
+          width="64"
+          height="64"
+          xmlns="http://www.w3.org/2000/svg"
+          >
+          <circle r="31" cy="32" cx="32" />
+        </svg>
+      </div>
+      <div class="story__picture">
+        <img src="assets/S03.jpg" alt="User Picture" />
+      </div>
+    </div>
+    <span class="story__user">Fases del embarazo</span>
+  </button>
+  <button class="story story--has-story" onclick="showPopup('Mitos del embarazo', '<ul><li><strong>No se pueden mantener relaciones sexuales:</strong> Realízalas en posiciones cómodas. No te preocupes, tu bebé no está en riesgo, ya que en el cuello de tu matriz hay una membrana mucosa que lo protege.</li><li><strong>Hay que comer por dos:</strong> Se trata de un mito falso. La clave para una buena alimentación durante el embarazo consiste en llevar una dieta sana, equilibrada y muy variada. Engordar demasiado durante el embarazo puede ser perjudicial, se asocia a complicaciones como diabetes gestacional, hipertensión, así como a sobrepeso y obesidad tras el parto.</li><li><strong>La forma de la barriga indica el sexo del bebé:</strong> Si la barriga de la embarazada está en pico, será un niño y si por lo contrario la barriga es redonda, será una niña. Se trata de una creencia popular ya que la forma de la barriga está relacionada con la constitución física, con el tono muscular y uterino de la madre y con la posición en la que se encuentre el bebé.</li><li><strong>Ardores: bebé con mucho pelo:</strong> A lo largo del tiempo se ha creído que el tener ardores durante el embarazo era signo de que el bebé nacería con mucho pelo. Las malas digestiones y los ardores durante el embarazo son consecuencia del aumento del tamaño del útero, que provoca el desplazamiento del estómago e intestino causando reflujo. La causa de la acidez es hormonal y fisiológica, nada tiene que ver con la cantidad de pelo.</li><li><strong>Beber cerveza ayuda a que se produzca la subida de la leche:</strong> La ingesta de cebada no influye a la hora de que se produzca la llegada de la leche materna. Además, la ingesta de alcohol está contraindicada en el embarazo.</li><li><strong>Colgarte un segurito es bueno para que no le pase nada al embarazo:</strong> La verdad es que no es una costumbre universal si no te lo colocas por olvido o simplemente no quieres, puedes estar muy tranquila de que tu embarazo no se afectará si no lo usas.</li><li><strong>La famosa mancha del antojo:</strong> La mujer durante el embarazo siente la necesidad o el deseo repentino de consumir ciertos alimentos que de no ser satisfechos puede ocasionar posibles problemas al bebé, siendo el más conocido las manchas de color. Lo único que está demostrado científicamente es que las embarazadas tienen antojos por ciertos alimentos como respuesta a los enormes cambios hormonales y físicos que sufre su cuerpo durante el embarazo.</li><li><strong>Prohibido teñirse el pelo:</strong> No hay evidencias de que los tintes de pelo afecten al bebé. Se recomienda eso sí, evitar el uso de productos que contengan amoniaco y sus derivados. Lo mejor sería utilizar durante la gestación tintes de origen vegetal o champús de color.</li></ul>', 'assets/S04.jpg')">
+    <div class="story__avatar">
+      <div class="story__border">
+        <svg
+        width="64"
+        height="64"
+        xmlns="http://www.w3.org/2000/svg"
+        >
+        <circle r="31" cy="32" cx="32" />
+      </svg>
+    </div>
+    <div class="story__picture">
+      <img src="assets/S04.jpg" alt="User Picture" />
+    </div>
+  </div>
+  <span class="story__user">Mitos</span>
+</button>
+<button class="story story--has-story" onclick="showPopup('Nutrición en el embarazo', '<ul><li><strong>NECESIDADES DE ENERGÍA:</strong> En promedio, una mujer embarazada requiere aproximadamente 300 Kcal más al día que cuando no está embarazada. Los requerimientos individuales se calculan tomando como base un mínimo de 36 Kcal/Kg de peso corporal durante el embarazo. Las necesidades energéticas de las adolescentes que están embarazadas pueden alcanzar las 50 Kcal/Kg/día.</li><li><strong>NECESIDADES PROTEÍNICAS:</strong> Las embarazadas adultas requieren 30 g/día más de proteína, o una ración total de 1,3 g/kg/día más que las mujeres no gestantes.</li><li><strong>NECESIDADES DE VITAMINAS:</strong> Durante el embarazo, se incrementan las necesidades de todas las vitaminas. La que requiere más atención es el ácido fólico, que fomenta el crecimiento fetal y previene las anemias relacionadas al embarazo. Las mujeres que pueden quedar embarazadas deben consumir 400 microgramos de ácido fólico, además de comer una variedad de alimentos ricos en folato natural.</li></ul>', 'assets/S05.jpg')">
+  <div class="story__avatar">
+    <div class="story__border">
+      <svg
+      width="64"
+      height="64"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <circle r="31" cy="32" cx="32" />
+    </svg>
+  </div>
+  <div class="story__picture">
+    <img src="assets/S04.jpg" alt="User Picture" />
+  </div>
+</div>
+<span class="story__user">Nutrición en el embarazo
+</span>
+</button>
+<button class="story story--has-story" onclick="showPopup('Nutrición en el puerperio', '<ul><li><strong>Las madres necesitan una adecuada cantidad de nutrientes, además de una ejecución de ejercicios tonificadores musculares, para fomentar la cicatrización de los tejidos traumatizados por el trabajo de parto y el parto.</strong></li><li><strong>Hidratación:</strong> Mantener una adecuada hidratación. Los requerimientos de líquidos aumentan de 500 a 1.000 ml, ya que son fundamentales para la producción de leche, además de la hidratación natural de tu cuerpo.</li><li><strong>Comer al menos 1 ó 2 frutas diferentes cada día:</strong> Lo que nos ayudará a lograr un mayor aporte de vitaminas y minerales, así como fibra en nuestra alimentación diaria.</li><li><strong>Consumir el equivalente a 1 – 2 tazas de verduras diferentes cada día:</strong> Lo cual nos ayudará a lograr una mejor variedad de vitaminas y minerales en nuestra alimentación diaria. En la variedad está la clave, y siempre prefiere las hortalizas de la estación (te recomiendo evitar pimiento, alcachofa y repollo). Si tienes la costumbre de tomar once, puedes agregar verduras al pan.</li><li><strong>Incorporar proteína en cada tiempo de comida:</strong> Es muy importante cuidar tu nutrición para que puedas estar fuerte y saludable en esta etapa.</li><li><strong>Si quieres consumir alimentos no nutritivos:</strong> Como pasteles, chocolates y galletas, lo ideal es que sea de manera ocasional, ya que de todas formas te puedes dar tus gustos.</li></ul>', 'assets/S05.jpg')">
+  <div class="story__avatar">
+    <div class="story__border">
+      <svg
+      width="64"
+      height="64"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <circle r="31" cy="32" cx="32" />
+    </svg>
+  </div>
+  <div class="story__picture">
+    <img src="assets/S05.jpg" alt="User Picture" />
+  </div>
+</div>
+<span class="story__user">Nutrición en el puerperio
+</span>
+</button>
+<button class="story story--has-story" onclick="showPopup('Complicaciones en el puerperio', '<ul><li><strong>Hemorragia:</strong> Puede estar provocada por una atonía uterina o por la pérdida de sangre de los vasos del cuello uterino, de la vagina o de la vulva.</li><li><strong>Infección de orina:</strong> Los cambios fisiológicos del embarazo y los sondajes vesicales pueden favorecer las infecciones de orina durante el posparto.</li><li><strong>Tromboembolismo:</strong> Durante el embarazo y el puerperio hay cambios fisiológicos que pueden favorecer la aparición de trombosis, sobre todo en mujeres obesas o las que se ha practicado una cesárea.</li><li><strong>Infección puerperal:</strong> El aumento de la temperatura corporal por encima de 38 ºC durante 48 horas a lo largo de los primeros 15 días del puerperio puede ser un síntoma de una infección puerperal.</li><li><strong>Loquios fétidos:</strong> Las pérdidas hemáticas que se inician después del alumbramiento denominan loquis y van cambiando de aspecto a medida que avanza el puerperio: primero son abundantes y rojas y, después, escasas y claras.</li><li><strong>Mastitis:</strong> Es la inflamación del tejido mamario. Suele darse en un solo pecho y puede ser causada por la aparición de grietas en el pezón, que son la puerta de entrada de los microorganismos (mastitis infecciosa) o que provocan la estasis de leche.</li><li><strong>Depresión posparto:</strong> El parto conlleva un reajuste físico y emocional que se vive durante el puerperio. Generalmente, durante los primeros días hay una tendencia a la tristeza, que se supera a medida que la mujer adquiere habilidades de cuidado del bebé y lo conoce.</li></ul>', 'assets/S06.jpg')">
+  <div class="story__avatar">
+    <div class="story__border">
+      <svg
+      width="64"
+      height="64"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <circle r="31" cy="32" cx="32" />
+    </svg>
+  </div>
+  <div class="story__picture">
+    <img src="assets/S06.jpg" alt="User Picture" />
+  </div>
+</div>
+<span class="story__user">Complicaciones en el puerperio</span>
+</button>
+</svg>
+</button>
+</div>
+
+<div class="posts">
+  <div class="posts">
+
+
+
+
+    
+
+<article class="post">
+      <div class="post__header">
+        <div class="post__profile">
+          <a
+          target="_blank"
+          class="post__avatar"
+          >
+          <img src="assets/default-user.png" alt="User Picture" />
+        </a>
+        <a
+        target="_blank"
+        class="post__user"
+        >HEALTH BREEDING</a
+        >
+      </div>
+      
+      <button class="post__more-options">
+        <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        >
+        <circle
+        cx="6.5"
+        cy="11.5"
+        r="1.5"
+        fill="var(--text-dark)"
+        />
+        <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+        <circle
+        cx="17.5"
+        cy="11.5"
+        r="1.5"
+        fill="var(--text-dark)"
+        />
+      </svg>
+    </button>
+    </div>
+    
+    <div class="post__content">
+      <div class="post__medias">
+        <img
+        class="post__media"
+        src="assets/fases/Picture1.jpg"
+        alt="Post Content"
+        />
+      </div>
+    </div>
+    
+    <div class="post__footer">
+      <div class="post__buttons">
+        <button class="post__button">
+          <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          >
+          <path
+          d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+          fill="var(--text-dark)"
+          stroke="var(--text-dark)"
+          stroke-width="0.6"
+          />
+        </svg>
+      </button>
+      <button class="post__button">
+        <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        >
+        <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+        fill="var(--text-dark)"
+        stroke="var(--text-dark)"
+        stroke-width="0.7"
+        />
+      </svg>
+    </button>
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.3"
+      />
+    </svg>
+    </button>
+    
+    <div class="post__indicators"></div>
+    
+    <button class="post__button post__button--align-right">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.7"
+      />
+    </svg>
+    </button>
+    </div>
+    
+    <div class="post__infos">
+      <div class="post__likes">
+        <a href="#" class="post__likes-avatar">
+          <img src="assets/default-user.png" alt="User Picture" />
+        </a>
+        
+        <span
+        >Liked by
+        <a class="post__name--underline" href="#">user123</a> and
+        <a href="#">77 others</a></span
+        >
+      </div>
+      
+      <div class="post__description">
+        <span>
+          <a
+          class="post__name--underline"
+          target="_blank"
+          >HEALTH BREEDING:</a
+          >
+          
+          <h1>Primer mes de embarazo:</h1>
+
+          A lo largo de los 9 meses de embarazo el bebé va formándose, desarrollándose y creciendo dentro del vientre materno hasta que llega el momento del nacimiento. Del mismo modo, el cuerpo de la mujer y los síntomas que siente van cambiando a medida que avanzan las semanas de embarazo.
+
+          <p id="toggleButton1" onclick="toggleContent1()" style="cursor: pointer;">Mostrar <span id="toggleText1" style="color: #ADD8E6;">más</span></p>
+          
+          <div id="moreContent1" style="display: none;">
+            Si se mantienen varias relaciones sexuales durante los días fértiles de la mujer para buscar el embarazo, es habitual que no se conozca con exactitud cuándo ha ocurrido la concepción y el inicio exacto del embarazo. Sin embargo, es más fácil que la mujer sepa cuándo le bajó la última regla (fecha de última menstruación o FUR).          
+          
+            <br>
+
+            Por ello, la FUR es la fecha que se suele tomar como referencia y, por tanto, la primera semana de gestación, en realidad, se corresponde con la semana en la que la mujer tuvo la última menstruación.
+          
+            <br>
+            El embrión proseguirá su camino hacia el útero, donde implantará, aproximadamente, unos 7-9 días después de la ovulación. En este momento, el embrión tiene entre 6 y 8 días de desarrollo. Empezará así la liberación de la hormona hCG, que es la hormona detectada por los test de embarazo.
+
+            <br>
+            
+            Es posible que, debido al aumento de la hormona hCG (la hormona del embarazo), la mujer empiece a notar algunos síntomas en este primer mes, pero de forma muy suave. 
+          </div>
+          
+          
+          <span class="post__date-time">42 minutes ago</span>
+        </div>
+      </div>
+</article>
+       
+<article class="post">
+  <div class="post__header">
+    <div class="post__profile">
+      <a
+      target="_blank"
+      class="post__avatar"
+      >
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    <a
+    target="_blank"
+    class="post__user"
+    >HEALTH BREEDING</a
+    >
+  </div>
+  
+  <button class="post__more-options">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <circle
+    cx="6.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+    <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+    <circle
+    cx="17.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+  </svg>
+</button>
+</div>
+
+<div class="post__content">
+  <div class="post__medias">
+    <img
+    class="post__media"
+    src="assets/fases/Picture3.jpg"
+    alt="Post Content"
+    />
+  </div>
+</div>
+
+<div class="post__footer">
+  <div class="post__buttons">
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.6"
+      />
+    </svg>
+  </button>
+  <button class="post__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+    fill="var(--text-dark)"
+    stroke="var(--text-dark)"
+    stroke-width="0.7"
+    />
+  </svg>
+</button>
+<button class="post__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.3"
+  />
+</svg>
+</button>
+
+<div class="post__indicators"></div>
+
+<button class="post__button post__button--align-right">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.7"
+  />
+</svg>
+</button>
+</div>
+
+<div class="post__infos">
+  <div class="post__likes">
+    <a href="#" class="post__likes-avatar">
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    
+    <span
+    >Liked by
+    <a class="post__name--underline" href="#">user123</a> and
+    <a href="#">273 others</a></span
+    >
+  </div>
+  
+  <div class="post__description">
+    <span>
+      <a
+      class="post__name--underline"
+      target="_blank"
+      >HEALTH BREEDING:</a
+      >
+      
+      <h1>Segundo mes de embarazo:</h1>
+      Tras la implantación, se producirá la gastrulación, mediante la cual las células del disco embrionario darán lugar a 3 capas diferenciadas: ectodermo, mesodermo y endodermo. Estas tres capas embrionarias formarán todos los tejidos y órganos del bebé.
+      
+      <p id="toggleButton2" onclick="toggleContent2()" style="cursor: pointer;">Mostrar <span id="toggleText2" style="color: #ADD8E6;">más</span></p>
+      
+      <div id="moreContent2" style="display: none;">
+        Es un mes de mucha evolución en el que el corazón primitivo, incluso, comienza a latir en la semana 6 de gestación
+        <br>
+                
+        La barriga todavía no se nota, aunque es posible que la mujer empieza a sentir ya algunos síntomas como náuseas, vómitos, cansancio o sensibilidad mamaria.
+
+        <br>
+
+        También puede ocurrir que la gestación avance sin demasiados síntomas, pero ello no es indicativo de complicación: simplemente significa que hay mujeres que padecen los síntomas de forma más suave.
+        
+      </div>
+      
+      
+      <span class="post__date-time">37 minutes ago</span>
+    </div>
+  </div>
+</article>
+
+<article class="post">
+  <div class="post__header">
+    <div class="post__profile">
+      <a
+      target="_blank"
+      class="post__avatar"
+      >
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    <a
+    target="_blank"
+    class="post__user"
+    >HEALTH BREEDING</a
+    >
+  </div>
+  
+  <button class="post__more-options">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <circle
+    cx="6.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+    <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+    <circle
+    cx="17.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+  </svg>
+</button>
+</div>
+
+<div class="post__content">
+  <div class="post__medias">
+    <img
+    class="post__media"
+    src="assets/fases/Picture4.jpg"
+    alt="Post Content"
+    />
+  </div>
+</div>
+
+<div class="post__footer">
+  <div class="post__buttons">
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.6"
+      />
+    </svg>
+  </button>
+  <button class="post__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+    fill="var(--text-dark)"
+    stroke="var(--text-dark)"
+    stroke-width="0.7"
+    />
+  </svg>
+</button>
+<button class="post__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.3"
+  />
+</svg>
+</button>
+
+<div class="post__indicators"></div>
+
+<button class="post__button post__button--align-right">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.7"
+  />
+</svg>
+</button>
+</div>
+
+<div class="post__infos">
+  <div class="post__likes">
+    <a href="#" class="post__likes-avatar">
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    
+    <span
+    >Liked by
+    <a class="post__name--underline" href="#">user123</a> and
+    <a href="#">113 others</a></span
+    >
+  </div>
+  
+  <div class="post__description">
+    <span>
+      <a
+      class="post__name--underline"
+      target="_blank"
+      >HEALTH BREEDING:</a
+      >
+      
+      <h1>Tercer mes de embarazo:</h1>
+      A partir de este mes finaliza el periodo de embrión y comienza el periodo fetal, por lo que el embrión pasa a denominarse feto. En el tercer mes de embarazo, el futuro bebé forma todos sus órganos, aunque, por el momento, no están desarrollados del todo. Falta que maduren y acaben de evolucionar correctamente.
+      
+      <p id="toggleButton3" onclick="toggleContent3()" style="cursor: pointer;">Mostrar <span id="toggleText3" style="color: #ADD8E6;">más</span></p>
+      
+      <div id="moreContent3" style="display: none;">
+        A lo largo de estas 4 semanas, el feto crece hasta los 7 cm y llegará a pesar unos 8-14 gramos, aproximadamente.
+        
+        Además, al finalizar este mes, es habitual que comiencen a reducirse los molestos síntomas causados por la hormona hCG, como las náuseas. El motivo es que la concentración de esta hormona alcanza un pico en la semana 12, pero luego comienza a descender paulatinamente.
+      </div>
+      
+      
+      <span class="post__date-time">33 minutes ago</span>
+    </div>
+  </div>
+</article>
+
+<article class="post">
+  <div class="post__header">
+    <div class="post__profile">
+      <a
+      target="_blank"
+      class="post__avatar"
+      >
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    <a
+    target="_blank"
+    class="post__user"
+    >HEALTH BREEDING</a
+    >
+  </div>
+  
+  <button class="post__more-options">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <circle
+    cx="6.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+    <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+    <circle
+    cx="17.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+  </svg>
+</button>
+</div>
+
+<div class="post__content">
+  <div class="post__medias">
+    <img
+    class="post__media"
+    src="assets/fases/Picture5.jpg"
+    alt="Post Content"
+    />
+  </div>
+</div>
+
+<div class="post__footer">
+  <div class="post__buttons">
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.6"
+      />
+    </svg>
+  </button>
+  <button class="post__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+    fill="var(--text-dark)"
+    stroke="var(--text-dark)"
+    stroke-width="0.7"
+    />
+  </svg>
+</button>
+<button class="post__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.3"
+  />
+</svg>
+</button>
+
+<div class="post__indicators"></div>
+
+<button class="post__button post__button--align-right">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.7"
+  />
+</svg>
+</button>
+</div>
+
+<div class="post__infos">
+  <div class="post__likes">
+    <a href="#" class="post__likes-avatar">
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    
+    <span
+    >Liked by
+    <a class="post__name--underline" href="#">user123</a> and
+    <a href="#">93 others</a></span
+    >
+  </div>
+  
+  <div class="post__description">
+    <span>
+      <a
+      class="post__name--underline"
+      target="_blank"
+      >HEALTH BREEDING</a
+      >
+      
+      <h1>Cuarto mes de embarazo:</h1>
+      En este cuarto mes de gestación, el feto se cubre de lanugo, un vello muy fino que recubre su piel y que actúa de conservador del calor corporal. Sus ojos son particularmente grandes, aún los mantiene cerrados y están muy separados entre sí. Sin embargo, la forma de la cara ya está definida y se puede distinguir perfectamente el cuello que separa la cabeza del resto del cuerpo.      
+
+      <p id="toggleButton4" onclick="toggleContent4()" style="cursor: pointer;">Mostrar <span id="toggleText4" style="color: #ADD8E6;">más</span></p>
+      
+      <div id="moreContent4" style="display: none;">
+        El intestino fetal comienza a acumular una sustancia espesa denominada meconio, que constituirá las primeras heces del bebé que expulsará tras el nacimiento.
+        Además, en la semana 16 de embarazo, aparecen los pliegues epidérmicos en las palmas de las manos y en los dedos del bebé, lo que serán sus huellas dactilares.
+        El tamaño del feto cuando finaliza el cuarto mes de gestación puede ser de unos 18 cm y su peso será de unos 100 g.
+      
+        <br>
+
+      </div>
+      
+      
+      <span class="post__date-time">31 minutes ago</span>
+    </div>
+  </div>
+</article>
+
+<article class="post">
+  <div class="post__header">
+    <div class="post__profile">
+      <a
+      target="_blank"
+      class="post__avatar"
+      >
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    <a
+    target="_blank"
+    class="post__user"
+    >HEALTH BREEDING</a
+    >
+  </div>
+  
+  <button class="post__more-options">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <circle
+    cx="6.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+    <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+    <circle
+    cx="17.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+  </svg>
+</button>
+</div>
+
+<div class="post__content">
+  <div class="post__medias">
+    <img
+    class="post__media"
+    src="assets/fases/Picture6.jpg"
+    alt="Post Content"
+    />
+  </div>
+</div>
+
+<div class="post__footer">
+  <div class="post__buttons">
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.6"
+      />
+    </svg>
+  </button>
+  <button class="post__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+    fill="var(--text-dark)"
+    stroke="var(--text-dark)"
+    stroke-width="0.7"
+    />
+  </svg>
+</button>
+<button class="post__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.3"
+  />
+</svg>
+</button>
+
+<div class="post__indicators"></div>
+
+<button class="post__button post__button--align-right">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.7"
+  />
+</svg>
+</button>
+</div>
+
+<div class="post__infos">
+  <div class="post__likes">
+    <a href="#" class="post__likes-avatar">
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    
+    <span
+    >Liked by
+    <a class="post__name--underline" href="#">user123</a> and
+    <a href="#">56 others</a></span
+    >
+  </div>
+  
+  <div class="post__description">
+    <span>
+      <a
+      class="post__name--underline"
+      target="_blank"
+      >HEALTH BREEDING:</a
+      >
+      
+      <h1>Quinto mes de embarazo:</h1>
+      Uno de los primeros cambios en este periodo de gestación es la aparición de la vérnix caseosa, una sustancia grasa y blanquecina que protegerá la piel del bebé.
+
+      <p id="toggleButton5" onclick="toggleContent5()" style="cursor: pointer;">Mostrar <span id="toggleText5" style="color: #ADD8E6;">más</span></p>
+      
+      <div id="moreContent5" style="display: none;">
+        Por otro lado, el feto empieza a percibir sonidos como la voz materna, por lo que puede ser interesante estimular esta capacidad. Además, las 4 cavidades cardíacas (2 aurículas y 2 ventrículos) se delimitan en este mes y el corazón fetal ya late con fuerza.
+        Al finalizar el quinto mes de gestación, el bebé puede llegar hasta los 25 centímetros de longitud, aproximadamente, y a los 300 g de peso.
+
+        <br>
+
+        Es posible que la embarazada note que, cuando se tumba, el feto se mueve mucho más y con más energía. Esto se debe a que el bebé se encaja mejor en la pelvis materna cuando la mujer está de pie. Por esta razón, sus movimientos pueden disminuir considerablemente, mientras que aumentan cuando la embarazada está en posición horizontal (tumbada).
+        Puede que el ombligo de la mujer se aplane o empiece a salirse hacia afuera. Si es el caso, volverá a su aspecto habitual después de dar a luz.
+        La embarazada ya no sentirá náuseas ni vómitos, aunque puede que tenga otro tipo de molestias, tales como ardores de estómago y dolores de espalda
+
+      </div>
+      
+      
+      <span class="post__date-time">30 minutes ago</span>
+    </div>
+  </div>
+</article>
+
+<article class="post">
+  <div class="post__header">
+    <div class="post__profile">
+      <a
+      target="_blank"
+      class="post__avatar"
+      >
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    <a
+    target="_blank"
+    class="post__user"
+    >HEALTH BREEDING</a
+    >
+  </div>
+  
+  <button class="post__more-options">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <circle
+    cx="6.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+    <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+    <circle
+    cx="17.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+  </svg>
+</button>
+</div>
+
+<div class="post__content">
+  <div class="post__medias">
+    <img
+    class="post__media"
+    src="assets/fases/Picture7.jpg"
+    alt="Post Content"
+    />
+  </div>
+</div>
+
+<div class="post__footer">
+  <div class="post__buttons">
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.6"
+      />
+    </svg>
+  </button>
+  <button class="post__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+    fill="var(--text-dark)"
+    stroke="var(--text-dark)"
+    stroke-width="0.7"
+    />
+  </svg>
+</button>
+<button class="post__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.3"
+  />
+</svg>
+</button>
+
+<div class="post__indicators"></div>
+
+<button class="post__button post__button--align-right">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.7"
+  />
+</svg>
+</button>
+</div>
+
+<div class="post__infos">
+  <div class="post__likes">
+    <a href="#" class="post__likes-avatar">
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    
+    <span
+    >Liked by
+    <a class="post__name--underline" href="#">user123</a> and
+    <a href="#">71 others</a></span
+    >
+  </div>
+  
+  <div class="post__description">
+    <span>
+      <a
+      class="post__name--underline"
+      target="_blank"
+      >HEALTH BREEDING:</a
+      >
+      
+      <h1>Sexto mes de embarazo:</h1>
+      La evolución del bebé pasa por medir de 25 cm a 35 cm, aproximadamente, y de pesar cerca de 300 gramos hasta unos 750 gramos.
+      
+      <p id="toggleButton6" onclick="toggleContent6()" style="cursor: pointer;">Mostrar <span id="toggleText6" style="color: #ADD8E6;">más</span></p>
+      
+      <div id="moreContent6" style="display: none;">
+        Al reconocer los sonidos claramente, responde perfectamente a los estímulos como, por ejemplo, la música. De este modo, se puede comprobar cómo el feto se mueve cuando escucha música, como respuesta al estímulo sonoro que está recibiendo.
+        <br>
+        
+        
+        En cuanto al pelo del futuro bebé, ya se le han formado las cejas, el cabello y las pestañas. Su piel empieza a volverse más opaca, cogiendo consistencia. El bebé puede abrir y cerrar los ojos, además de hacer gestos como sacar la lengua. Las proporciones de su cuerpecito empiezan a igualarse en relación a su cabeza. Cada vez está mejor formado y se parece más al futuro recién nacido.
+
+        <br>
+
+        La barriga ya debe ser bastante voluminosa, por lo que es probable que la mujer se sienta cansada, tenga dolores de espalda, molestias o incomodidades en ciertas posturas y algo de hinchazón en piernas, tobillos y pies.
+        
+        
+      </div>
+      
+      
+      <span class="post__date-time">27 minutes ago</span>
+    </div>
+  </div>
+</article>
+
+<article class="post">
+  <div class="post__header">
+    <div class="post__profile">
+      <a
+      target="_blank"
+      class="post__avatar"
+      >
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    <a
+    target="_blank"
+    class="post__user"
+    >HEALTH BREEDING</a
+    >
+  </div>
+  
+  <button class="post__more-options">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <circle
+    cx="6.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+    <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+    <circle
+    cx="17.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+  </svg>
+</button>
+</div>
+
+<div class="post__content">
+  <div class="post__medias">
+    <img
+    class="post__media"
+    src="assets/fases/Picture8.jpg"
+    alt="Post Content"
+    />
+  </div>
+</div>
+
+<div class="post__footer">
+  <div class="post__buttons">
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.6"
+      />
+    </svg>
+  </button>
+  <button class="post__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+    fill="var(--text-dark)"
+    stroke="var(--text-dark)"
+    stroke-width="0.7"
+    />
+  </svg>
+</button>
+<button class="post__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.3"
+  />
+</svg>
+</button>
+
+<div class="post__indicators"></div>
+
+<button class="post__button post__button--align-right">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.7"
+  />
+</svg>
+</button>
+</div>
+
+<div class="post__infos">
+  <div class="post__likes">
+    <a href="#" class="post__likes-avatar">
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    
+    <span
+    >Liked by
+    <a class="post__name--underline" href="#">user123</a> and
+    <a href="#">89 others</a></span
+    >
+  </div>
+  
+  <div class="post__description">
+    <span>
+      <a
+      class="post__name--underline"
+      target="_blank"
+      >HEALTH BREEDING:</a
+      >
+      
+      <h1>Séptimo mes de embarazo:</h1>
+      Empieza el último trimestre de embarazo y el desarrollo fetal es ya avanzado. Por ello, es normal que la mujer sienta mayor cansancio y pesadez. Además, a la embarazada le ...
+      
+      <p id="toggleButton7" onclick="toggleContent7()" style="cursor: pointer;">Mostrar <span id="toggleText7" style="color: #ADD8E6;">más</span></p>
+      
+      <div id="moreContent7" style="display: none;">
+        costará más dormir, hacer ciertos movimientos como atarse los cordones o agacharse a recoger cosas del suelo. Adicionalmente, es probable que haya más hinchazón en pies y tobillos.
+
+        <br>
+        En este periodo de gestación, el esqueleto fetal se hace más consistente. La grasa ya empieza a acumularse debajo de la piel del bebé, lo que le permitirá controlar la temperatura tras el nacimiento. En este mes, la longitud del feto alcanzará los 40 cm, aproximadamente, y puede llegar a sobrepasar ligeramente los 1100 gramos.
+
+        <br>
+        Además, al finalizar este mes, es habitual que comiencen a reducirse los molestos síntomas causados por la hormona hCG, como las náuseas. El motivo es que la concentración de esta hormona alcanza un pico en la semana 12, pero luego comienza a descender paulatinamente. 
+        
+      </div>
+      
+      
+      <span class="post__date-time">22 minutes ago</span>
+    </div>
+  </div>
+</article>
+
+<article class="post">
+  <div class="post__header">
+    <div class="post__profile">
+      <a
+      target="_blank"
+      class="post__avatar"
+      >
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    <a
+    target="_blank"
+    class="post__user"
+    >HEALTH BREEDING</a
+    >
+  </div>
+  
+  <button class="post__more-options">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <circle
+    cx="6.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+    <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+    <circle
+    cx="17.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+  </svg>
+</button>
+</div>
+
+<div class="post__content">
+  <div class="post__medias">
+    <img
+    class="post__media"
+    src="assets/fases/Picture9.jpg"
+    alt="Post Content"
+    />
+  </div>
+</div>
+
+<div class="post__footer">
+  <div class="post__buttons">
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.6"
+      />
+    </svg>
+  </button>
+  <button class="post__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+    fill="var(--text-dark)"
+    stroke="var(--text-dark)"
+    stroke-width="0.7"
+    />
+  </svg>
+</button>
+<button class="post__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.3"
+  />
+</svg>
+</button>
+
+<div class="post__indicators"></div>
+
+<button class="post__button post__button--align-right">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.7"
+  />
+</svg>
+</button>
+</div>
+
+<div class="post__infos">
+  <div class="post__likes">
+    <a href="#" class="post__likes-avatar">
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    
+    <span
+    >Liked by
+    <a class="post__name--underline" href="#">user123</a> and
+    <a href="#">81 others</a></span
+    >
+  </div>
+  
+  <div class="post__description">
+    <span>
+      <a
+      class="post__name--underline"
+      target="_blank"
+      >HEALTH BREEDING:</a
+      >
+      
+      <h1>Octavo mes de embarazo:</h1>
+      El bebé comienza a perder el lanugo que cubría su cuerpo y sigue aumentando de peso y tamaño, por lo que se siguen limitando sus movimientos y, al mismo tiempo, no deja de presionar, ...
+      
+      <p id="toggleButton8" onclick="toggleContent8()" style="cursor: pointer;">Mostrar <span id="toggleText8" style="color: #ADD8E6;">más</span></p>
+      
+      <div id="moreContent8" style="display: none;">
+        cada vez más, la vejiga materna. A lo largo de este mes, el bebé alcanzará cerca del 50% del peso total que tendrá al nacimiento.
+        En este mes de embarazo los movimientos del bebé ya sean visibles por fuera del abdomen materno, lo que será realmente especial.
+
+        <br>
+
+        
+        Por otro lado, su piel va adquiriendo cada vez un aspecto más liso y sonrosado, debido a que sigue la acumulación de grasa subcutánea. Pese a que el bebé está prácticamente formado, sus pulmones aún no están maduros y, si tuviera lugar un parto prematuro, no podrían respirar por sí mismos.
+
+        <br>
+        Es muy posible que la mujer sienta acidez o que esté estreñida durante esta fase del embarazo. Todos estos síntomas son muy habituales y se deben a que el aumento del tamaño del útero hace las digestiones más difíciles, lentas y pesadas.
+
+        <br>
+        El cansancio durante este último período del embarazo también es bastante normal. Esto ocurre no solo por el aumento de peso, que suele fatigar mucho, sino porque las dificultades para dormir y descansar ya serán notables.
+        <br>
+        Se recomienda tomar mucho calcio, hierro, ácido fólico, proteínas y vitamina C. El estado de gestación es muy avanzado, así que la embarazada debe cuidarse mucho.
+        <br>
+
+      </div>
+      
+      
+      <span class="post__date-time">14 minutes ago</span>
+    </div>
+  </div>
+</article>
+
+<article class="post">
+  <div class="post__header">
+    <div class="post__profile">
+      <a
+      target="_blank"
+      class="post__avatar"
+      >
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    <a
+    target="_blank"
+    class="post__user"
+    >HEALTH BREEDING</a
+    >
+  </div>
+  
+  <button class="post__more-options">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <circle
+    cx="6.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+    <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+    <circle
+    cx="17.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+  </svg>
+</button>
+</div>
+
+<div class="post__content">
+  <div class="post__medias">
+    <img
+    class="post__media"
+    src="assets/fases/Picture10.jpg"
+    alt="Post Content"
+    />
+  </div>
+</div>
+
+<div class="post__footer">
+  <div class="post__buttons">
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.6"
+      />
+    </svg>
+  </button>
+  <button class="post__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+    fill="var(--text-dark)"
+    stroke="var(--text-dark)"
+    stroke-width="0.7"
+    />
+  </svg>
+</button>
+<button class="post__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.3"
+  />
+</svg>
+</button>
+
+<div class="post__indicators"></div>
+
+<button class="post__button post__button--align-right">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.7"
+  />
+</svg>
+</button>
+</div>
+
+<div class="post__infos">
+  <div class="post__likes">
+    <a href="#" class="post__likes-avatar">
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    
+    <span
+    >Liked by
+    <a class="post__name--underline" href="#">user123</a> and
+    <a href="#">100 others</a></span
+    >
+  </div>
+  
+  <div class="post__description">
+    <span>
+      <a
+      class="post__name--underline"
+      target="_blank"
+      >HEALTH BREEDING:</a
+      >
+      
+      <h1>Noveno mes de embarazo:</h1>
+      Al finalizar el noveno mes de embarazo, el feto puede medir cerca de 50 cm y, su peso, será de unos 2500 g de media. Durante este periodo, el bebé encaja su cabecita en la pelvis materna, preparándose para el parto.
+            
+      <p id="toggleButton9" onclick="toggleContent9()" style="cursor: pointer;">Mostrar <span id="toggleText9" style="color: #ADD8E6;">más</span></p>
+      
+      <div id="moreContent9" style="display: none;">
+        La piel del bebé ya no está arrugada y es más suave, debido a la grasa que se ha ido acumulando debajo de ella y a la desaparición, casi completa, del lanugo. El color de la piel ya no es tan rojo, sino que empieza a sonrojarse y se asemeja más al color definitivo que tendrá en el momento del parto.
+        <br>      
+        Como hemos comentado, desde hace ya algunas semanas, los movimientos del bebé son menores debido a su aumento de tamaño y de peso, pero esto no significa que la embarazada no sienta la presencia de su futuro hijo. De hecho, no debe pasar ni un solo día en que no se sienta al bebé. No obstante, es habitual que ahora los movimientos se sientan más bruscos, como si fuesen patadas, ya que el bebé tiene muy poco espacio para moverse.
+        <br>
+        Este mes puede hacerse especialmente largo y molesto para la madre, aunque lo vive con mucha ilusión: el parto se acerca y son muchas las ganas de verle la carita al bebé.
+      </div>
+      
+      
+      <span class="post__date-time">10 minutes ago</span>
+    </div>
+  </div>
+</article>
+
+<article class="post">
+  <div class="post__header">
+    <div class="post__profile">
+      <a
+      target="_blank"
+      class="post__avatar"
+      >
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    <a
+    target="_blank"
+    class="post__user"
+    >HEALTH BREEDING</a
+    >
+  </div>
+  
+  <button class="post__more-options">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <circle
+    cx="6.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+    <circle cx="12" cy="11.5" r="1.5" fill="var(--text-dark)" />
+    <circle
+    cx="17.5"
+    cy="11.5"
+    r="1.5"
+    fill="var(--text-dark)"
+    />
+  </svg>
+</button>
+</div>
+
+<div class="post__content">
+  <div class="post__medias">
+    <img
+    class="post__media"
+    src="assets/fases/Picture11.jpg"
+    alt="Post Content"
+    />
+  </div>
+</div>
+
+<div class="post__footer">
+  <div class="post__buttons">
+    <button class="post__button">
+      <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <path
+      d="M11.4995 21.2609C11.1062 21.2609 10.7307 21.1362 10.4133 20.9001C8.2588 19.3012 3.10938 15.3239 1.81755 12.9143C0.127895 9.76543 1.14258 5.72131 4.07489 3.89968C5.02253 3.31177 6.09533 3 7.18601 3C8.81755 3 10.3508 3.66808 11.4995 4.85726C12.6483 3.66808 14.1815 3 15.8131 3C16.9038 3 17.9766 3.31177 18.9242 3.89968C21.8565 5.72131 22.8712 9.76543 21.186 12.9143C19.8942 15.3239 14.7448 19.3012 12.5902 20.9001C12.2684 21.1362 11.8929 21.2609 11.4995 21.2609ZM7.18601 4.33616C6.34565 4.33616 5.5187 4.57667 4.78562 5.03096C2.43888 6.49183 1.63428 9.74316 2.99763 12.2819C4.19558 14.5177 9.58639 18.6242 11.209 19.8267C11.3789 19.9514 11.6158 19.9514 11.7856 19.8267C13.4082 18.6197 18.799 14.5133 19.997 12.2819C21.3603 9.74316 20.5557 6.48738 18.209 5.03096C17.4804 4.57667 16.6534 4.33616 15.8131 4.33616C14.3425 4.33616 12.9657 5.04878 12.0359 6.28696L11.4995 7.00848L10.9631 6.28696C10.0334 5.04878 8.6611 4.33616 7.18601 4.33616Z"
+      fill="var(--text-dark)"
+      stroke="var(--text-dark)"
+      stroke-width="0.6"
+      />
+    </svg>
+  </button>
+  <button class="post__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M21.2959 20.8165L20.2351 16.8602C20.1743 16.6385 20.2047 16.3994 20.309 16.1907C21.2351 14.3342 21.5438 12.117 20.9742 9.80402C20.2003 6.67374 17.757 4.16081 14.6354 3.33042C13.7833 3.10869 12.9442 3 12.1312 3C6.29665 3 1.74035 8.47365 3.31418 14.5647C4.04458 17.3819 7.05314 20.2992 9.88344 20.9861C10.6486 21.173 11.4008 21.26 12.1312 21.26C13.7006 21.26 15.1701 20.8557 16.4614 20.1601C16.6049 20.0818 16.7657 20.0383 16.9222 20.0383C17.0005 20.0383 17.0787 20.047 17.157 20.0688L21.009 21.0991C21.0307 21.1035 21.0525 21.1078 21.0699 21.1078C21.2177 21.1078 21.3351 20.9687 21.2959 20.8165ZM19.0178 17.1863L19.6178 19.4253L17.4831 18.8558C17.3005 18.8079 17.1135 18.7819 16.9222 18.7819C16.557 18.7819 16.1875 18.8775 15.8571 19.0558C14.6963 19.6818 13.4441 19.9992 12.1312 19.9992C11.4834 19.9992 10.8269 19.9166 10.1791 19.7601C7.78354 19.1775 5.14453 16.6037 4.53586 14.2473C3.90111 11.7865 4.40109 9.26057 5.90536 7.31719C7.40964 5.3738 9.6791 4.26081 12.1312 4.26081C12.8529 4.26081 13.5876 4.35646 14.3137 4.5521C16.9961 5.26511 19.0786 7.39544 19.7525 10.1084C20.2264 12.0213 20.0308 13.9299 19.183 15.6298C18.9395 16.1168 18.8787 16.6689 19.0178 17.1863Z"
+    fill="var(--text-dark)"
+    stroke="var(--text-dark)"
+    stroke-width="0.7"
+    />
+  </svg>
+</button>
+<button class="post__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22.8555 3.44542C22.6978 3.16703 22.3962 3 22.0714 3L2.91369 3.01392C2.52859 3.01392 2.19453 3.25055 2.05997 3.60781C1.96254 3.86764 1.98574 4.14603 2.11565 4.37338C2.16669 4.45689 2.23165 4.53577 2.31052 4.60537L9.69243 10.9712L11.4927 20.5338C11.5623 20.9096 11.8499 21.188 12.2304 21.2483C12.6062 21.3086 12.9774 21.1323 13.1723 20.8029L22.8509 4.35018C23.0179 4.06715 23.0179 3.72381 22.8555 3.44542ZM4.21748 4.39194H19.8164L10.4255 9.75089L4.21748 4.39194ZM12.6248 18.9841L11.1122 10.948L20.5171 5.58436L12.6248 18.9841Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.3"
+  />
+</svg>
+</button>
+
+<div class="post__indicators"></div>
+
+<button class="post__button post__button--align-right">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-width="0.7"
+  />
+</svg>
+</button>
+</div>
+
+<div class="post__infos">
+  <div class="post__likes">
+    <a href="#" class="post__likes-avatar">
+      <img src="assets/default-user.png" alt="User Picture" />
+    </a>
+    
+    <span
+    >Liked by
+    <a class="post__name--underline" href="#">user123</a> and
+    <a href="#">16 others</a></span
+    >
+  </div>
+  
+  <div class="post__description">
+    <span>
+      <a
+      class="post__name--underline"
+      target="_blank"
+      >HEALTH BREEDING:</a
+      >
+      
+      <h1>El final del embarazo:</h1>
+      Es habitual que la mujer note unas fuertes contracciones, conocidas como contracciones de Braxton Hicks, que son contracciones diferentes a las de parto y que se producen como ...
+            
+      <p id="toggleButton10" onclick="toggleContent10()" style="cursor: pointer;">Mostrar <span id="toggleText10" style="color: #ADD8E6;">más</span></p>
+      
+      <div id="moreContent10" style="display: none;">
+        preparación del organismo para cuando llegue el momento de dar a luz. Estas contracciones son indoloras (aunque pueden ser molestas), irregulares y no aumentan su frecuencia e intensidad, por lo que pueden distinguirse de las contracciones de parto verdaderas.
+        <br>      
+        La rotura de aguas y, con ello, el parto, puede producirse en cualquier momento. La mujer debe tener lista la bolsa de maternidad (con todo lo necesario para ella y para el bebé durante los días de ingreso) y acudir al hospital.
+        <br>
+        Si, a partir de la semana 42, el bebé no ha visto la luz, lo habitual es que el especialista encargado del seguimiento del embarazo provoque el parto, ya que el futuro hijo o hija está listo para nacer y puede suponer un riesgo que se quede más tiempo del necesario en el vientre de la madre.
+      </div>
+      
+      
+      <span class="post__date-time">7 minutes ago</span>
+    </div>
+  </div>
+</article>
+
+
+
+
+</div>
+</div>
+
+<section class="side-menu">
+  <div class="side-menu__user-profile">
+    <a
+    target="_blank"
+    class="side-menu__user-avatar"
+    >
+    <img src="assets/default-user.png" alt="User Picture" />
+  </a>
+  <div class="side-menu__user-info">
+    <a  target="_blank"
+    >HEALTH BREEDING-Medic</a
+    >
+    <span>HEALTH BREEDING</span>
+  </div>
+  <button class="side-menu__user-button">Switch</button>
+</div>
+
+<div class="side-menu__suggestions-section">
+  <div class="side-menu__suggestions-header">
+    <h2>Suggestions for You</h2>
+    <button>See All</button>
+  </div>
+  <div class="side-menu__suggestions-content">
+    <div class="side-menu__suggestion">
+      <a href="#" class="side-menu__suggestion-avatar">
+        <img src="assets/default-user.png" alt="User Picture" />
+      </a>
+      <div class="side-menu__suggestion-info">
+        <a href="#">usernick16</a>
+        <span>Followed by user1, user2 and 9 others</span>
+      </div>
+      <button class="side-menu__suggestion-button">Follow</button>
+    </div>
+    <div class="side-menu__suggestion">
+      <a href="#" class="side-menu__suggestion-avatar">
+        <img src="assets/default-user.png" alt="User Picture" />
+      </a>
+      <div class="side-menu__suggestion-info">
+        <a href="#">usernick17</a>
+        <span>Followed by user1, user2 and 3 others</span>
+      </div>
+      <button class="side-menu__suggestion-button">Follow</button>
+    </div>
+    <div class="side-menu__suggestion">
+      <a href="#" class="side-menu__suggestion-avatar">
+        <img src="assets/default-user.png" alt="User Picture" />
+      </a>
+      <div class="side-menu__suggestion-info">
+        <a href="#">usernick18</a>
+        <span>Followed by user1 and 9 others</span>
+      </div>
+      <button class="side-menu__suggestion-button">Follow</button>
+    </div>
+    <div class="side-menu__suggestion">
+      <a href="#" class="side-menu__suggestion-avatar">
+        <img src="assets/default-user.png" alt="User Picture" />
+      </a>
+      <div class="side-menu__suggestion-info">
+        <a href="#">usernick19</a>
+        <span>Followed by user1 and 3 others</span>
+      </div>
+      <button class="side-menu__suggestion-button">Follow</button>
+    </div>
+    <div class="side-menu__suggestion">
+      <a href="#" class="side-menu__suggestion-avatar">
+        <img src="assets/default-user.png" alt="User Picture" />
+      </a>
+      <div class="side-menu__suggestion-info">
+        <a href="#">usernick20</a>
+        <span>Followed by user1 and 6 others</span>
+      </div>
+      <button class="side-menu__suggestion-button">Follow</button>
+    </div>
+  </div>
+</div>
+
+<div class="side-menu__footer">
+  <div class="side-menu__footer-links">
+    <ul class="side-menu__footer-list">
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">About</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">Help</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">Press</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">API</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">Jobs</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">Privacy</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">Terms</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">Locations</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">Top Accounts</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">Hashtag</a>
+      </li>
+      <li class="side-menu__footer-item">
+        <a class="side-menu__footer-link" href="#">Language</a>
+      </li>
+    </ul>
+  </div>
+  
+  <span class="side-menu__footer-copyright"
+  >&copy; 2021 instagram from facebook</span
+  >
+</div>
+</section>
+</section>
+</main>
+
+<nav class="navbar">
+  <a href="#" class="navbar__button">
+    <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+    d="M2.45307 11.751L11.9773 2.02175L21.5015 11.751C21.7906 12.0463 21.9545 12.4468 21.9545 12.8711V20.4556C21.9545 20.7747 21.7037 21 21.4427 21H15.964C15.713 21 15.4721 20.7849 15.4721 20.476V15.8886C15.4721 13.9497 13.9267 12.34 11.9773 12.34C10.0279 12.34 8.48244 13.9497 8.48244 15.8886V20.476C8.48244 20.7849 8.24157 21 7.99053 21H2.51187C2.25085 21 2 20.7747 2 20.4556V12.8711C2 12.4468 2.16397 12.0463 2.45307 11.751Z"
+    stroke="var(--text-dark)"
+    stroke-width="2"
+    />
+  </svg>
+</a>
+<a href="#" class="navbar__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M21.669 21.6543C21.8625 21.4622 21.863 21.1494 21.6703 20.9566L17.3049 16.5913C18.7912 14.9327 19.7017 12.7525 19.7017 10.3508C19.7017 5.18819 15.5135 1 10.3508 1C5.18819 1 1 5.18819 1 10.3508C1 15.5135 5.18819 19.7017 10.3508 19.7017C12.7624 19.7017 14.9475 18.7813 16.606 17.2852L20.9739 21.653C21.1657 21.8449 21.4765 21.8454 21.669 21.6543ZM1.9843 10.3508C1.9843 5.7394 5.7394 1.9843 10.3508 1.9843C14.9623 1.9843 18.7174 5.7394 18.7174 10.3508C18.7174 14.9623 14.9623 18.7174 10.3508 18.7174C5.7394 18.7174 1.9843 14.9623 1.9843 10.3508Z"
+  fill="var(--text-dark)"
+  stroke="var(--text-dark)"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  />
+</svg>
+</a>
+<a href="#" class="navbar__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M18 2.8H7C5.23269 2.8 3.8 4.23269 3.8 6V17C3.8 18.7673 5.23269 20.2 7 20.2H18C19.7673 20.2 21.2 18.7673 21.2 17V6C21.2 4.23269 19.7673 2.8 18 2.8ZM7 1C4.23858 1 2 3.23858 2 6V17C2 19.7614 4.23858 22 7 22H18C20.7614 22 23 19.7614 23 17V6C23 3.23858 20.7614 1 18 1H7Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M22 7.99995H3V6.19995H22V7.99995Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M10 6.99989L6 1.99989L7.57349 1.12573L11.5735 6.12573L10 6.99989Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M16.5 6.99989L12.5 1.99989L14.0735 1.12573L18.0735 6.12573L16.5 6.99989Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  d="M15.75 13.0671C16.0833 13.2595 16.0833 13.7407 15.75 13.9331L10.5 16.9642C10.1667 17.1566 9.75 16.9161 9.75 16.5312L9.75 10.469C9.75 10.0841 10.1667 9.84354 10.5 10.036L15.75 13.0671Z"
+  fill="var(--text-dark)"
+  />
+</svg>
+</a>
+<a href="#" class="navbar__button">
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  >
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M17.6007 7.94185H6.47927C5.84559 7.94185 5.32113 8.43455 5.2816 9.06699L4.80842 16.638C4.6573 19.0559 6.57759 21.0999 9.00024 21.0999H15.0797C17.5023 21.0999 19.4226 19.0559 19.2715 16.638L18.7983 9.06699C18.7588 8.43455 18.2343 7.94185 17.6007 7.94185ZM6.47927 6.14185C4.89508 6.14185 3.58393 7.37361 3.48511 8.95471L3.01192 16.5257C2.79604 19.9799 5.53931 22.9 9.00024 22.9H15.0797C18.5406 22.9 21.2839 19.9799 21.068 16.5257L20.5948 8.95471C20.496 7.37361 19.1849 6.14185 17.6007 6.14185H6.47927Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M12.2761 2.8C11.0812 2.8 10.1125 3.76867 10.1125 4.96359V6.1419H8.3125V4.96359C8.3125 2.77456 10.0871 1 12.2761 1C14.4651 1 16.2397 2.77456 16.2397 4.96359V6.1419H14.4397V4.96359C14.4397 3.76867 13.471 2.8 12.2761 2.8Z"
+  fill="var(--text-dark)"
+  />
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M12.2757 12.3118C13.4706 12.3118 14.4393 11.3431 14.4393 10.1482L14.4393 9.91256C14.4393 9.41551 14.8422 9.01256 15.3393 9.01256C15.8363 9.01256 16.2393 9.41551 16.2393 9.91256L16.2393 10.1482C16.2393 12.3373 14.4647 14.1118 12.2757 14.1118C10.0866 14.1118 8.31208 12.3373 8.31208 10.1482L8.31208 9.91257C8.31208 9.41551 8.71502 9.01257 9.21208 9.01257C9.70913 9.01257 10.1121 9.41551 10.1121 9.91257L10.1121 10.1482C10.1121 11.3431 11.0807 12.3118 12.2757 12.3118Z"
+  fill="var(--text-dark)"
+  />
+</svg>
+</a>
+<button class="navbar__button profile-button">
+  <div class="profile-button__border"></div>
+  <div class="profile-button__picture">
+    <img src="assets/default-user.png" alt="User Picture" />
+  </div>
+</button>
+</nav>
+
+
+</body>
+</html>
